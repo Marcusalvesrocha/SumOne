@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  get 'home/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'home#index'
+  root 'site/home#index'
+  
+  namespace :site do
+    get 'home/index'
+  end
+
+  namespace :administrative do
+    get 'dashboard/index'
+  end
+
+  devise_for :admins
 
 end
