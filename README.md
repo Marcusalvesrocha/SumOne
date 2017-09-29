@@ -7,7 +7,7 @@
 
 ### BootStrap:
 
-São utilizados dos temas feito em bootstrap, um para a parte administrativa e outro para listagem de livros.
+São utilizados dois temas feito em bootstrap, um para a parte administrativa e outro para listagem de livros.
 
 * Heroic Features: https://startbootstrap.com/template-overviews/heroic-features/
 * SB-Admin 2: https://startbootstrap.com/template-overviews/sb-admin-2/
