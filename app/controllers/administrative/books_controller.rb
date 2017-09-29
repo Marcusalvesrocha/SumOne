@@ -5,11 +5,16 @@ class Administrative::BooksController < AdministrativeController
   end
 
   def new
-  	
+  	@book = Book.new
   end
 
   def create
-  	
+  	@book = Book.new(params_book)
+    if @book.save
+      redirect_to administrative_books_path, notice: "O livro #{@book.title} foi cadastrado com sucesso"
+    else
+      render :new
+    end
   end
 
   def edit
@@ -18,5 +23,11 @@ class Administrative::BooksController < AdministrativeController
 
   def update
   	
+  end
+
+  private
+
+  def params_book
+    params.require(:book).permit(:title, :description, :author)
   end
 end
