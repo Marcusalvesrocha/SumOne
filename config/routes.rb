@@ -11,8 +11,10 @@ Rails.application.routes.draw do
 
   namespace :administrative do
     get 'dashboard', to: 'dashboard#index'
+    get 'books/index'
   end
 
   devise_for :admins
+  #resources :books
 
 end
