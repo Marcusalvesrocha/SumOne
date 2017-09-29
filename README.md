@@ -1,24 +1,20 @@
-# README
+# SumOne
+## Sistema de Livros
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Linguagem e Framework:
 
-Things you may want to cover:
+* Ruby on Rails
 
-* Ruby version
+### BootStrap:
 
-* System dependencies
+São utilizados dos temas feito em bootstrap, um para a parte administrativa e outro para listagem de livros.
 
-* Configuration
+* Heroic Features: https://startbootstrap.com/template-overviews/heroic-features/
+* SB-Admin 2: https://startbootstrap.com/template-overviews/sb-admin-2/
 
-* Database creation
+### Gems:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* devise: Utilizada para autenticação dos admins;
+* devise-i18n: Faz a tradução, com I18N, dos textos mensagens do devise;
+* rails-assets-bootstrap: Utilizada para configurar o bootstrap na aplicação;
+* bootstrap_sb_admin_base_v2: Configura o tema sb-admin 2 na aplicação;
