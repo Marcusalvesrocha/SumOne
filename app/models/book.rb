@@ -5,5 +5,6 @@ class Book < ApplicationRecord
 	validates_presence_of :author
 
 	#Scope
-	scope :order_by, -> (ordination = "title") { order(ordination) }
+	scope :all_books, ->  { all }
+	scope :new_book, -> { self.new}
 end
