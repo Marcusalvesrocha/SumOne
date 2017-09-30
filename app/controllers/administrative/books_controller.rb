@@ -1,5 +1,5 @@
 class Administrative::BooksController < AdministrativeController
-  before_action :set_book, only: [:edit, :update]
+  before_action :set_book, only: [:edit, :update, :destroy]
   def index
   	@books = Book.all
   end
