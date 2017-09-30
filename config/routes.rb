@@ -14,7 +14,6 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
   end
 
-  devise_for :admins
-  #resources :books
-
+  devise_for :admins, controllers: { sessions: 'admins/sessions' }
+  
 end

@@ -15,7 +15,8 @@
           <% @books.each do |book| %>
             <div class="col-md-4 col-sm-8 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/300x450" alt="">
+                    <%= image_tag book.picture.url(:medium) %>
+                    
                     <div class="caption">
                         <h4><%= truncate(book.title, length: 30) %></h4>
                         <p><%= truncate(book.description, length: 40) %></p>
