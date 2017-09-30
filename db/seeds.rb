@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Cadastrando o administrador padrão..."
+
+adm = Admin.create!(email: "admin@sumone.com",
+	                password: "123123",
+	                password_confirmation: "123123"#, role: 0
+)
+
+puts "Administrador #{adm.email} cadastrado"

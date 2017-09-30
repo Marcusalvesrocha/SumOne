@@ -1,9 +1,12 @@
 # SumOne
 ## Sistema de Livros
 
-### Linguagem e Framework:
+### Tecnologias utilizadas:
 
-* Ruby on Rails
+* Ruby (2.3.4)
+* Rails (5.0.6)
+* SQLite
+* BootStrap
 
 ### BootStrap:
 
@@ -17,7 +20,7 @@ São utilizados dois temas feito em bootstrap, um para a parte administrativa e 
 * [devise](https://github.com/plataformatec/devise): Utilizada para autenticação dos admins;
 * devise-i18n: Faz a tradução, com I18N, dos textos mensagens do devise;
 * rails-assets-bootstrap: Utilizada para configurar o bootstrap na aplicação;
-* bootstrap_sb_admin_base_v2: Configura o tema sb-admin 2 na aplicação;
+* [bootstrap_sb_admin_base_v2](https://startbootstrap.com/template-overviews/sb-admin-2/): Configura o tema sb-admin 2 na aplicação;
 * [paperclip](https://github.com/thoughtbot/paperclip): Gerencia o uso de imagens;
 
 ### Layouts:
@@ -42,3 +45,19 @@ sudo apt-get install imagemagick
 Para informações de como [instalar o ImageMagick em outros sistemas operacionais](https://www.imagemagick.org/script/download.php)
 
 É necessário executar o comando `which convert` para retorna o caminho dos comandos do ImageMagick. `/usr/local/bin/convert`.
+
+## Configurando o ambiente de desenvolvimento
+
+Para configura o ambiente de desenvolvimento, é necessario a instalação do IMageMagick(descrito no tópico anterior) e rodar o comando a seguir:
+
+```
+rails dev:setup
+```
+
+Está tarefa cria o banco de dados, executa as migrates e inseri o Admin padrão.
+
+Dados de acesso do admin padrão:
+```
+Usuário: admin@sumone.com
+senha: 123123
+```
