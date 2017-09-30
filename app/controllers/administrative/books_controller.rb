@@ -30,6 +30,14 @@ class Administrative::BooksController < AdministrativeController
     end
   end
 
+  def destroy
+    if @book.destroy
+      redirect_to administrative_books_path, notice: "O livro #{@book.title} foi excluido com sucesso"
+    else
+      render :index
+    end
+  end
+
   private
 
   def set_book
