@@ -13,12 +13,12 @@
         <!-- Page Features -->
         <div class="row text-center">
           <% @books.each do |book| %>
-            <div class="col-md-4 col-sm-6 hero-feature">
+            <div class="col-md-4 col-sm-8 hero-feature">
                 <div class="thumbnail">
                     <img src="http://placehold.it/300x450" alt="">
                     <div class="caption">
-                        <h4><%= truncate(book.title, length: 35) %></h4>
-                        <p><%= truncate(book.description, length: 50) %></p>
+                        <h4><%= truncate(book.title, length: 30) %></h4>
+                        <p><%= truncate(book.description, length: 40) %></p>
                         <p>Autor: <%= truncate(book.author, length: 20) %></p>
                     </div>
                 </div>
