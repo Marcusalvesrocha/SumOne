@@ -1,20 +1,21 @@
- <!-- Page Content -->
+
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="well well-sm">
-        <%= form_tag site_search_path, method: :post do %>
+        <%= form_tag site_search_path, method: :post, remote: true do %>
                       
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <div class="input-group">
+                  <div class="col-lg-6">
+                    <%= text_field_tag(:q, params[:q], {class: "form-control col-lg-6", placeholder: "Pesquisar por..."}) %>
+                  </div>
+                    
+                  <div class="col-lg-6 form-group">
                   
-                </div><!-- /input-group -->
-              </div><!-- /.col-lg-6 -->
-              <div class="col-lg-6">
-                <div class="input-group">
-
-                    <%= text_field_tag(:q, params[:q], {class: "form-control", placeholder: "Pesquisar por..."}) %>
+                    <%#= select_tag 'Ordem', options_from_collection_for_select(options_for_Ordenation, 'id', 'description', {class: "form-group"}) %>
+                  </div>
                     <span class="input-group-btn">
                       <%= submit_tag("Pesquisar", class: "btn btn-default") %>
                     </span>
@@ -27,7 +28,7 @@
         <% end %>
       </div>
     </div>
-  </div>  
+  </div>
     <% @books.each do |book| %>
       <div class="container">
       <!-- Page Features -->

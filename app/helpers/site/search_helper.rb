@@ -1,2 +1,3 @@
 module Site::SearchHelper
+	
 end
