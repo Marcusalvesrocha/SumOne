@@ -1,0 +1,53 @@
+ <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="well well-sm">
+        <%= form_tag site_search_path, method: :post do %>
+                      
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="input-group">
+                  
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                <div class="input-group">
+
+                    <%= text_field_tag(:q, params[:q], {class: "form-control", placeholder: "Pesquisar por..."}) %>
+                    <span class="input-group-btn">
+                      <%= submit_tag("Pesquisar", class: "btn btn-default") %>
+                    </span>
+                  
+
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>  
+    <% @books.each do |book| %>
+      <div class="container">
+      <!-- Page Features -->
+        <div class="row">
+          <div class="col-md-2 col-sm-8 hero-feature">
+              <%= image_tag book.picture.url(:medium) %>
+            
+          </div>
+          <div class="col-md-10 col-sm-8 hero-feature">
+              <div class="caption">
+                <h4><%= truncate(book.title, length: 90) %></h4>
+                <p><%= truncate(book.description, length: 100) %></p>
+                <p>Autor: <%= truncate(book.author, length: 90) %></p>
+              </div>
+            
+          </div>
+        </div>
+        <!-- /.row -->
+      
+
+        <hr>
+      </div>
+    <% end %>

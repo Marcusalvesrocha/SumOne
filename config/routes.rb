@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   namespace :site do
     get 'home', to: 'home#index'
+    post 'search', to: 'search#books'
   end
 
   namespace :administrative do
