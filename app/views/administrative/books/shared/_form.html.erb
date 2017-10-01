@@ -16,7 +16,7 @@
                 <%= form_for([:administrative, @book], html: { multipart: true }) do |f| %>
 
                   <div class="form-group">
-                    <label>Título</label>
+                    <%= f.label :title %>
                     <%= f.text_field :title, class: "form-control" %>
                   </div>
                   
@@ -26,12 +26,12 @@
                   </div>
                 
                   <div class="form-group">
-                    <label>Autor</label>
+                    <%= f.label :author %>
                     <%= f.text_field :author, class: "form-control" %>
                   </div>
                 
                   <div class="form-group">
-                    <label>Capa do Livro</label>
+                    <%= f.label :picture %>
                     <%= image_tag @book.picture(:thumb) %>
                     <%= f.file_field :picture %>
                   </div>

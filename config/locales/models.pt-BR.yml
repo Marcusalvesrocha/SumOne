@@ -1,0 +1,25 @@
+"pt-BR":
+  activerecord:
+    models:
+      book:
+        one: Livro
+        other: Livros
+      admin:
+        one: Administrador
+        other: Administradores
+    attributes:
+      book:
+        id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+        title: Título
+        description: Descrição
+        author: Autor
+        picture: Capa
+      admin:
+        id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação de Senha
