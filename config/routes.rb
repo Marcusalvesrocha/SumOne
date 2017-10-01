@@ -15,6 +15,6 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
   end
 
-  devise_for :admins, controllers: { sessions: 'admins/sessions' }
+  devise_for :admins, :skip => [:registrations], controllers: { sessions: 'admins/sessions' }
   
 end

@@ -61,3 +61,11 @@ Dados de acesso do admin padrão:
 Usuário: admin@sumone.com
 senha: 123123
 ```
+
+## Obs.:
+
+O devise entrega várias funcionalidades, entre elas a de cadastro de admin, e como foi especificado, no primeiro tópico, ter apenas autenticação de administrador, foi adicionado ao arquivo `config/routes.rb`, na criação das rotas `devise_for :admins`, a configuração para não ter a possibilidade de cadastrar-se. Ficando:
+
+```
+devise_for :admins, :skip => [:registrations]
+```
