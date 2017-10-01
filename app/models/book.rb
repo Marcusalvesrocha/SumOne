@@ -11,8 +11,10 @@ class Book < ApplicationRecord
 	#Scope
 	scope :all_books, -> (ordenation = "title") { all.order(ordenation) }
 
-  scope :search, -> (q, ordenation = "title") { 
-    where("lower(description) LIKE ?", "%#{q.downcase}%").or(where("lower(title) LIKE ?", "%#{q.downcase}%")).or(where("lower(author) LIKE ?", "%#{q.downcase}%")).order(ordenation)
+  scope :search, -> (q, ordenation) { 
+    where("lower(description) LIKE ?", "%#{q.downcase}%").order(ordenation)
+    .or(where("lower(title) LIKE ?", "%#{q.downcase}%").order(ordenation))
+    .or(where("lower(author) LIKE ?", "%#{q.downcase}%").order(ordenation))
   }
 
 

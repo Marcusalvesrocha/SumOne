@@ -27,6 +27,38 @@
     
         <%= render partial: "layouts/site_shared/navigation" %>
 
+
+        <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="well well-sm">
+        <%= form_tag site_search_path, method: :post, remote: true do %>
+                      
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="input-group">
+                    
+                  <div class="col-lg-2 pull-right">
+                    <%= select_tag :d, options_for_ordenation(:d), class: 'form-control' %>
+                  </div>
+                  <div class="col-lg-5 pull-right">
+                    <%= text_field_tag(:q, params[:q], {class: "form-control", placeholder: "Pesquisar por..."}) %>
+                  </div>
+                    <span class="input-group-btn">
+                      <%= submit_tag("Pesquisar", class: "btn btn-default") %>
+                    </span>
+                  
+
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
         <%= yield %>
 
         <%= render partial: "layouts/site_shared/footer" %>
