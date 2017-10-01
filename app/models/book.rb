@@ -9,7 +9,7 @@ class Book < ApplicationRecord
 	validates_presence_of :author
 
 	#Scope
-	scope :all_books, -> (ordenation = "title") { all.order(ordenation) }
+	scope :all_books, -> (ordenation = "title ASC") { all.order(ordenation) }
 
   scope :search, -> (q, ordenation) { 
     where("lower(description) LIKE ?", "%#{q.downcase}%").order(ordenation)

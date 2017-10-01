@@ -1,8 +1,7 @@
 module ApplicationHelper
 	OEDENATION_OPTIONS = [
-		["Título", "title"],
-		["Descrição", "description"],
-		["Autor", "author"]
+		["Crescente", "title ASC"],
+		["Decrescente", "title DESC"]
 	]
 
 	def options_for_ordenation(selected)
